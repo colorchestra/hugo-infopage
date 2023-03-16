@@ -1,92 +1,40 @@
-# smol
+# hugo-infopage
 
-A minimal, monospaced blogging theme for Hugo that respects your privacy and is easy on your bandwidth. A demo can be found at https://smol-demo.morph.sh.
+You ever want to print out a passive-aggressive note to your neighbours and put it up in the hallway - but on the internet? Just some text with a headline, maybe an image, some links, and that's it? Not on your blog, not on social media, not in a Google doc, not connected to anything, just a super dumb HTML site that you can put wherever you please and that doesn't have your name on it? `hugo-infopage` is JUST what you need!
 
-smol is based on [Blank](https://github.com/Vimux/Blank) created by [Vimux](https://github.com/Vimux).
-
-
-![Screenshot](/images/tn.png)
+Seriously though: recently I wanted to share some information with some acquaintances along with a few files for them to download, but I didn't want this to be connected to me in any way or for them to be able to find out more about me through this. Normal people would use a Google doc or something for this, but that's bloated and stupid and Google. `hugo-infopage` gives you just an HTML page that you can put on absolutely any webserver and you're done.
 
 ## Features
 
-- No JavaScript
-- No Google spyware or tracking of any kind
-- No other external dependencies, embedded fonts or comment sections
+- Just a page with some text on it
+- Overview page for all of your passive-aggressive notes
+- No header, no footer, no imprint, no RSS, no stupid "About me"
+- No JS, no fonts, no tracking
+- Looks ok
 - Dark mode support (depending on your OS's setting)
 
 ## Installation
 
-In your Hugo site `themes` directory, run:
+In your Hugo site directory, run:
 
 ```
-git clone https://github.com/colorchestra/smol
+git clone https://github.com/colorchestra/hugo-infopage themes/infopage
 ```
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `smol`.
+Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `infopage`.
 
 ```
-theme = "smol"
+theme = "infopage"
 ```
 
-Lastly, add the following lines to your `config.toml` to set site parameters and make use of all the menu entries in the header and footer sections if you need them.
+## Usage
+To create a new page, do `hugo new --kind page content/something`. Write your note into `content/something/index.md`, add any files or images that you may have to the `something` directory, build the site and boom, you're done. scp / rsync / pipeline it to wherever you please.
 
-```
-# Parameters
-[params]
-    subtitle = "Your blog subtitle goes here!"
-    dateFmt = "02.01.2006 15:04"
-
-# Header
-[menu]
-  [[menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts/"
-        weight = 1 
-
-  [[menu.main]]
-        identifier = "categories"
-        name = "Categories"
-        url = "/categories/"
-        weight = 2 
-
-  [[menu.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags/"
-        weight = 3
-
-# Footer
-  [[menu.footer]]
-        name = "Github"
-        url = "https://github.com/example"
-        weight = 1 
-
-    [[menu.footer]]
-        name = "Mastodon"
-        url = "https://example.com/@user"
-        weight = 2 
-
-    [[menu.footer]]
-        name = "Imprint"
-        url = "/imprint"
-        weight = 3 
-
-```
-
-For more information read the official [quick start guide](https://gohugo.io/getting-started/quick-start/) of Hugo.
-
-## Optional features
-### Custom copyright text
-Add `copyright = "Your text here"` - in the config.toml to change the copyright notice in the footer.
+For your convenience, the `index.html` root site contains a list of all the pages you've made. This list is not meant to be published because this theme is intended to only create singular pages that are not connected to other pages or even 'posts'.
 
 ### Image captions
 You can add captions to images (technically using `<figcaption>` HTML tags) by adding titles, like so: `![Alt text here](/path/to/image.png "Put your caption here!")`
 
-## Contributing
-
-Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/colorchestra/smol/issues) to let me know. Or make directly a [pull request](https://github.com/colorchestra/smol/pulls).
-
 ## License
 
-This theme is released under the [MIT license](https://github.com/colorchestra/smol/blob/master/LICENSE).
+This theme is released under the [MIT license](https://github.com/colorchestra/hugo-infopage/blob/main/LICENSE).
