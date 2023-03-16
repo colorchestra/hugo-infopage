@@ -1,0 +1,11 @@
+{{ define "main" }}
+	<main>
+	<h1>Pages overview</h1>
+	<h3>Note: this page is not meant to be published!</h3>
+	 It's just an overview for you.
+	 Usage: copy the individual pages to a webserver under a URL that you like.<br /><br />
+		{{ range .Site.RegularPages }}
+				    <li>{{ .Date.Format "2006-01-02" }}: <a href="{{ .RelPermalink }}">{{.Title }}</a></li><br>
+		{{ end }}
+	</main>
+{{ end }}
