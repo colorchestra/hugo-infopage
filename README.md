@@ -7,11 +7,12 @@ Seriously though: recently I wanted to share some information with some acquaint
 ## Features
 
 - Just a page with some text on it
-- Overview page for all of your passive-aggressive notes
+- Nothing fancy
 - No header, no footer, no imprint, no RSS, no stupid "About me"
-- No JS, no fonts, no tracking
-- Looks ok
+- No Javascript, no fonts, no tracking, no comments
+- Inline styles (I know, but it's one less file to worry about when deploying)
 - Dark mode support (depending on your OS's setting)
+- Overview page to keep track of your passive-aggressive notes
 
 ## Installation
 
@@ -35,6 +36,10 @@ For your convenience, the `index.html` root site contains a list of all the page
 ### Image captions
 You can add captions to images (technically using `<figcaption>` HTML tags) by adding titles, like so: `![Alt text here](/path/to/image.png "Put your caption here!")`
 
-## License
+## To Do
+- encode images and attachments into base64 and put it in the html files, maybe? The way https://github.com/Y2Z/monolith does it
+- don't create tags and categories
+- move styles inline
 
+## License
 This theme is released under the [MIT license](https://github.com/colorchestra/hugo-infopage/blob/main/LICENSE).
