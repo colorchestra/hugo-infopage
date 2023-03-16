@@ -1,12 +1,12 @@
 name = "infopage"
 license = "MIT"
 licenselink = "https://github.com/colorchestra/hugo-infopage/blob/main/LICENSE.md"
-description = "Minimal Hugo theme using a Monospace font and without any tracking or external dependencies."
+description = "Create simple pages with some pages on it. Not a blog, not a personal website, just some information for you to slap wherever."
 homepage = "https://github.com/colorchestra/hugo-infopage"
-tags = ["blog", "minimal", "monospace", "dark mode", "simple", "clean", "light", "responsive", "fast", "no-js", "no-tracking", "privacy"]
-features = ["blog", "privacy", "responsive", "fast"]
+tags = ["singlepage", "minimal", "monospace", "dark mode", "responsive", "no-js", "no-tracking"]
+features = ["singlepage", "privacy", "responsive", "fast"]
 min_version = "0.20"
 
 [author]
-  name = "morph"
+  name = "morph / colorchestra"
   homepage = "morph.sh"

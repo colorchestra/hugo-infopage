@@ -7,8 +7,9 @@ Seriously though: recently I wanted to share some information with some acquaint
 ## Features
 
 - Just a page with some text on it
-- Nothing fancy
+- No fancy bullshit
 - No header, no footer, no imprint, no RSS, no stupid "About me"
+- No categories, no tags, no taxonomies
 - No Javascript, no fonts, no tracking, no comments
 - Inline styles (I know, but it's one less file to worry about when deploying)
 - Dark mode support (depending on your OS's setting)
@@ -22,10 +23,11 @@ In your Hugo site directory, run:
 git clone https://github.com/colorchestra/hugo-infopage themes/infopage
 ```
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `infopage`. Also disable creating categories and tags because we don't need them.
+Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `infopage`. Also disable creating categories and tags because we don't need them. The `relativeURLs` option is needed if you want to use the overview page to work if you put in on some random server without knowing the path beforehand.
 ```
 theme = "infopage"
 disableKinds = ["taxonomy", "term"]
+relativeURLs = true
 ```
 That is, by the way, pretty much all you need in your config. I recommend to add the `languageCode` attribute as well for accessibility, but all the other stuff that's in the config by default is not needed.
 
@@ -39,8 +41,9 @@ You can add captions to images (technically using `<figcaption>` HTML tags) by a
 
 ## To Do
 - encode images and attachments into base64 and put it in the html files, maybe? The way https://github.com/Y2Z/monolith does it
-- don't create tags and categories
-- move styles inline
+- ~~don't create tags and categories~~
+- ~~move styles inline~~
+- maybe choose some nicer colors
 
 ## License
 This theme is released under the [MIT license](https://github.com/colorchestra/hugo-infopage/blob/main/LICENSE).
