@@ -22,11 +22,12 @@ In your Hugo site directory, run:
 git clone https://github.com/colorchestra/hugo-infopage themes/infopage
 ```
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `infopage`.
-
+Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `infopage`. Also disable creating categories and tags because we don't need them.
 ```
 theme = "infopage"
+disableKinds = ["taxonomy", "term"]
 ```
+That is, by the way, pretty much all you need in your config. I recommend to add the `languageCode` attribute as well for accessibility, but all the other stuff that's in the config by default is not needed.
 
 ## Usage
 To create a new page, do `hugo new --kind page content/something`. Write your note into `content/something/index.md`, add any files or images that you may have to the `something` directory, build the site and boom, you're done. scp / rsync / pipeline it to wherever you please.
