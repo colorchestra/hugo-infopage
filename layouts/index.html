@@ -1,13 +1,6 @@
 {{ define "main" }}
 	<main>
-	<h1>Pages overview</h1>
-	<b>Note: this page is not meant to be published!</b>
-	 It's just an overview for you.<br /><br />
-	 Usage: copy the individual pages to a webserver under a URL that you like.<br /><br />
-		{{ range .Site.RegularPages }}
-				    <li>{{ .Date.Format "2006-01-02" }}: <a href="{{ .RelPermalink }}">{{.Title }}</a></li>
-					<small>Deployment shorthand: `{{ $.Site.Params.DeployCommand }} {{ $.Site.Params.ServerAddress }}:{{ $.Site.Params.TargetDirectory }} {{ $.Param "deployDirectory"}}`</small><br />
- 
-		{{ end }}
+	<h1>Hugo-Infopage start</h1>
+	<b>Nothing to see here!</b>
 	</main>
 {{ end }}
